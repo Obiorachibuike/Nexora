@@ -1,0 +1,6 @@
+name: nexora
+description: Official Dart and Flutter SDK for the Nexora infrastructure engine.
+version: 0.1.0
+homepage: https://nexora.dev
+environment:
+  sdk: '>=3.0.0 <4.0.0'

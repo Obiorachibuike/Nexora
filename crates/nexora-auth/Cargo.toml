@@ -1,0 +1,12 @@
+[package]
+name = "nexora-auth"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+sha2 = { workspace = true }
+subtle = { workspace = true }
+serde = { workspace = true }

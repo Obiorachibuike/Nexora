@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Nexora.Client</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Nexora Contributors</Authors>
+    <Description>Official C# / .NET SDK for the Nexora infrastructure engine.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+</Project>

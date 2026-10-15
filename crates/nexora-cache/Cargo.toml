@@ -1,0 +1,11 @@
+[package]
+name = "nexora-cache"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+tokio = { workspace = true }
+chrono = { workspace = true }

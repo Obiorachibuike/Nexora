@@ -1,0 +1,31 @@
+[package]
+name = "nexora-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "nexora-server"
+path = "src/main.rs"
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+nexora-protocol = { path = "../nexora-protocol" }
+nexora-storage = { path = "../nexora-storage" }
+nexora-cache = { path = "../nexora-cache" }
+nexora-queue = { path = "../nexora-queue" }
+nexora-events = { path = "../nexora-events" }
+nexora-scheduler = { path = "../nexora-scheduler" }
+nexora-workers = { path = "../nexora-workers" }
+nexora-auth = { path = "../nexora-auth" }
+nexora-metrics = { path = "../nexora-metrics" }
+nexora-admin = { path = "../nexora-admin" }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+bytes = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,29 @@
+{
+  "name": "@nexora/client",
+  "version": "0.1.0",
+  "description": "Official TypeScript SDK for the Nexora infrastructure engine",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test"
+  },
+  "keywords": [
+    "nexora",
+    "queue",
+    "cache",
+    "key-value",
+    "events",
+    "scheduler"
+  ],
+  "author": "Nexora Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}

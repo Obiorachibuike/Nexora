@@ -1,0 +1,44 @@
+{
+  "protocol": "NBP/1.0",
+  "magic": [78, 69, 88, 79],
+  "vectors": [
+    {
+      "name": "PING_REQUEST",
+      "command": "PING",
+      "command_id": 2,
+      "message_type": 1,
+      "correlation_id": 42,
+      "flags": 0,
+      "payload": "",
+      "expected_hex": "4e45584f01010000000000000000002a0002000000002ab1"
+    },
+    {
+      "name": "AUTH_REQUEST",
+      "command": "AUTH",
+      "command_id": 1,
+      "message_type": 1,
+      "correlation_id": 100,
+      "flags": 0,
+      "payload": "{\"api_key\":\"nx_test_key_123\"}",
+      "payload_len": 30
+    },
+    {
+      "name": "SET_REQUEST",
+      "command": "SET",
+      "command_id": 16,
+      "message_type": 1,
+      "correlation_id": 101,
+      "flags": 0,
+      "payload": "{\"key\":\"session:abc\",\"value\":\"active\",\"ttl_ms\":3600000}"
+    },
+    {
+      "name": "GET_REQUEST",
+      "command": "GET",
+      "command_id": 17,
+      "message_type": 1,
+      "correlation_id": 102,
+      "flags": 0,
+      "payload": "{\"key\":\"session:abc\"}"
+    }
+  ]
+}

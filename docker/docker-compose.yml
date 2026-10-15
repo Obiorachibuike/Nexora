@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nexora:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: nexora-server
+    restart: unless-stopped
+    ports:
+      - "6380:6380" # TCP Binary Protocol
+      - "6381:6381" # HTTP Management & Prometheus
+    environment:
+      - NEXORA_API_KEY=nx_prod_secret_token
+    volumes:
+      - nexora-data:/data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:6381/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+volumes:
+  nexora-data:
+    driver: local

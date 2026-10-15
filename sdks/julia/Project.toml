@@ -1,0 +1,7 @@
+name = "Nexora"
+uuid = "a6c8e54e-4f7b-419b-b271-87a26f8d169c"
+authors = ["Nexora Contributors <engineering@nexora.dev>"]
+version = "0.1.0"
+
+[deps]
+Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
