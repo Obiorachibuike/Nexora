@@ -1,4 +1,4 @@
-export interface SdkMeta {
+export interface SdkBase {
   name: string;
   slug: string;
   category: 'primary' | 'backend' | 'systems' | 'modern' | 'scientific';
@@ -12,7 +12,15 @@ export interface SdkMeta {
   features: string[];
 }
 
-export const SDKS: SdkMeta[] = [
+export interface SdkMeta extends SdkBase {
+  packageName: string;
+  registry: string;
+  minVersion: string;
+  codeSnippet: string;
+  workerSnippet: string;
+}
+
+const SDKS_BASE: SdkBase[] = [
   {
     name: 'TypeScript',
     slug: 'typescript',
@@ -459,3 +467,35 @@ $client->disconnect();`,
     features: ['CPAN compliant', 'Mojolicious & Catalyst integration', 'Safe signal and lease handling'],
   },
 ];
+
+const PACKAGE_NAMES: Record<string, string> = {
+  typescript: '@nexora/client',
+  javascript: 'nexora',
+  python: 'nexora',
+  java: 'nexora-client',
+  csharp: 'Nexora.Client',
+  go: 'github.com/nexora-dev/nexora-go',
+  php: 'nexora/nexora-php',
+  ruby: 'nexora',
+  rust: 'nexora',
+  cpp: 'nexora',
+  c: 'nexora',
+  kotlin: 'dev.nexora:nexora-kotlin',
+  swift: 'nexora-swift',
+  dart: 'nexora',
+  elixir: 'nexora',
+  scala: 'dev.nexora:nexora-scala',
+  r: 'nexora-dev/nexora-r',
+  julia: 'Nexora',
+  lua: 'nexora',
+  perl: 'Nexora::Client',
+};
+
+export const SDKS: SdkMeta[] = SDKS_BASE.map((sdk) => ({
+  ...sdk,
+  packageName: PACKAGE_NAMES[sdk.slug] ?? sdk.packageManager,
+  registry: sdk.packageManager,
+  minVersion: sdk.version,
+  codeSnippet: sdk.quickstartCode,
+  workerSnippet: sdk.quickstartCode,
+}));
