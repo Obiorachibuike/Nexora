@@ -1,0 +1,53 @@
+# Nexora ignore rules
+target/
+**/*.rs.bk
+*.log
+/data/
+*.pid
+
+# Node / JS / TS
+node_modules/
+.next/
+dist/
+out/
+build/
+coverage/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+env/
+venv/
+
+# Go
+sdks/go/bin/
+*.exe
+
+# C / C++
+*.o
+*.so
+*.dylib
+*.a
+build/
+CMakeCache.txt
+CMakeFiles/
+
+# Java / JVM
+.gradle/
+*.class
+*.jar
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key

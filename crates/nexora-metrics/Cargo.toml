@@ -1,0 +1,11 @@
+[package]
+name = "nexora-metrics"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }

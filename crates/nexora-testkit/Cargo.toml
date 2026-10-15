@@ -1,0 +1,14 @@
+[package]
+name = "nexora-testkit"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+nexora-protocol = { path = "../nexora-protocol" }
+nexora-storage = { path = "../nexora-storage" }
+tokio = { workspace = true }
+bytes = { workspace = true }
+serde_json = { workspace = true }

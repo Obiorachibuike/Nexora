@@ -1,0 +1,17 @@
+[package]
+name = "nexora-admin"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+nexora-core = { path = "../nexora-core" }
+nexora-metrics = { path = "../nexora-metrics" }
+nexora-storage = { path = "../nexora-storage" }
+nexora-queue = { path = "../nexora-queue" }
+axum = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }

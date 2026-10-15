@@ -1,0 +1,14 @@
+{
+  "name": "nexora/nexora-client",
+  "description": "Official PHP client for the Nexora independent infrastructure engine.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Nexora\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1"
+  }
+}

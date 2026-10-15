@@ -1,0 +1,8 @@
+Package: nexora
+Title: Official R Client for Nexora Infrastructure Engine
+Version: 0.1.0
+Authors@R: person("Nexora", "Contributors", email = "engineering@nexora.dev", role = c("aut", "cre"))
+Description: Communicates directly with the Nexora engine over TCP for background queueing and key-value persistence.
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.2.3

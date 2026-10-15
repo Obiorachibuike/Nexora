@@ -1,0 +1,9 @@
+{
+  "name": "nexora-node-example",
+  "version": "0.1.0",
+  "description": "Runnable Node.js & TypeScript example using @nexora/client",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
